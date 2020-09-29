@@ -1,0 +1,20 @@
+$colors: (
+  primary: #45a293,
+  primary-light: #66fcf1,
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+body {
+  background-color: rgba(color(primary-light), 0.5);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  //pixels are for monkeys, rem = relative units, 1 rem = 10px, vh = viewport height or vw= viewport width 95vw == 95% of screen width
+}
